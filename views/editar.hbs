@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="formulario">
+        <input type="hidden" id="registroId"> <!-- Campo oculto para almacenar el ID del registro -->
+
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa">
+
+        <label for="nombrePeaje">Nombre del Peaje:</label>
+        <select id="nombrePeaje" onchange="buscarValorPeaje()">
+            
+        </select>
+
+        <label for="idCategoriaTarifa">Categoría:</label>
+        <select id="idCategoriaTarifa" onchange="buscarValorPeaje()">
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="V">V</option>
+        </select>
+
+        <label for="fecha">Fecha:</label>
+        <input type="datetime-local" id="fecha">
+
+        <label for="valor">Valor del Peaje:</label>
+        <input type="text" id="valor" readonly>
+
+        <button type="submit">Guardar</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="editar.js"></script>
+</body>
+</html>
